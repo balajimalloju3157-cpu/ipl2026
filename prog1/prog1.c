@@ -12,6 +12,24 @@ struct Student
 void storeRecords();
 void displayMthRecord(int m);
 void deleteRecord(int delId);
+int main()
+{
+    int m, delId;
+
+    storeRecords();
+
+    printf("\nEnter record number to display: ");
+    scanf("%d", &m);
+
+    displayMthRecord(m);
+
+    printf("\nEnter ID to delete: ");
+    scanf("%d", &delId);
+
+    deleteRecord(delId);
+
+    return 0;
+}
 
 void storeRecords()
 {
@@ -105,21 +123,3 @@ void deleteRecord(int delId)
     printf("Record deleted successfully\n");
 }
 
-int main()
-{
-    int m, delId;
-
-    storeRecords();
-
-    printf("\nEnter record number to display: ");
-    scanf("%d", &m);
-
-    displayMthRecord(m);
-
-    printf("\nEnter ID to delete: ");
-    scanf("%d", &delId);
-
-    deleteRecord(delId);
-
-    return 0;
-}
